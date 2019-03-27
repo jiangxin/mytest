@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/jiangxin/mytest/hello"
 )
 
 func main() {
-	fmt.Println(hello.Hello())
+	var msg string
+	if len(os.Args) > 1 {
+		msg = os.Args[1]
+	}
+	fmt.Println(hello.Hello(msg))
 }

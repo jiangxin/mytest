@@ -1,5 +1,8 @@
 package hello
 
-func Hello() string {
-	return "Hello, world"
+func Hello(msg string) string {
+	if msg == "" {
+		msg = "world"
+	}
+	return "Hello, " + msg
 }
